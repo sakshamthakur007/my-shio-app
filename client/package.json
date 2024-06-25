@@ -38,5 +38,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/"
+  "proxy": "https://my-shio-app.onrender.com/user/info/"
 }

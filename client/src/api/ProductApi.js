@@ -8,7 +8,7 @@ const ProductAPI = () => {
 
     const getProducts = async () => {
         try {
-            const response = await axios.get('/api/products');
+            const response = await axios.get('https://my-shio-app.onrender.com/api/products');
             setProducts(response.data);
             setLoading(false);
             console.log('Products fetched:', response.data);

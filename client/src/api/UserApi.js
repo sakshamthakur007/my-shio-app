@@ -10,7 +10,7 @@ const UserApi = (token) => {
 
             const getUser = async() => {
                 try{
-                    const res = await axios.get('/user/info',{
+                    const res = await axios.get('https://my-shio-app.onrender.com/user/info',{
                         headers:{Authorization:token}
                     })
                     setIsLogged(true)

@@ -11,7 +11,7 @@ export const DataProvider = ({ children }) => {
 
     const refreshToken = async () => {
         try {
-            const res = await axios.get('/user/refresh_token'); // Correct HTTP method
+            const res = await axios.get('https://my-shio-app.onrender.com/user/refresh_token'); // Correct HTTP method
             console.log('Response:', res); // Log the full response for debugging
             setToken(res.data.accessToken); // Ensure this matches the response structure
             console.log('Token:', res.data.accessToken); // Log the token value

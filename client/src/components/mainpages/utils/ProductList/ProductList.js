@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './productlist.css'
-import {Link} from 'react-router-dom'
 import BtnRendered from './BtnRendered';
 const ProductList = ({product,isAdmin}) => {
   const [isChecked, setIsChecked] = useState(product.checked);

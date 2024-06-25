@@ -19,7 +19,7 @@ const onChangeInput = (e) => {
 const registerSubmit = async(e) => {
   e.preventDefault();
 try {
-   await axios.post('/user/register',{...user})
+   await axios.post('https://my-shio-app.onrender.com/user/register',{...user})
 
     localStorage.setItem('firstRegister',true)
 

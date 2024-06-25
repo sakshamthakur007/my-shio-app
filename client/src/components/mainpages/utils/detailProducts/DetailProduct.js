@@ -9,17 +9,14 @@ const DetailProduct = () => {
     const [detailsProduct,setDetailProduct] = useState(null)
 
 
-    useEffect(()=>{
-        console.log('params:', params); // Add this line
-        console.log('products:', products); // Add this line
-        if(params && params.id && products.length > 0){
-            products.forEach((product )=> {
-                const foundProduct = products.find(product => product._id === params.id);
-                setDetailProduct(foundProduct || null);
-            })
-        }
-        
-    },[params,products])
+    useEffect(() => {
+      console.log('params:', params);
+      console.log('products:', products);
+      if (params && params.id && products.length > 0) {
+          const foundProduct = products.find(product => product._id === params.id);
+          setDetailProduct(foundProduct || null);
+      }
+  }, [params, products]);
     console.log("details",detailsProduct);
     if(detailsProduct=== null) return null;
   return (

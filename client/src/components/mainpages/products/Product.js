@@ -5,11 +5,11 @@ import ProductList from '../utils/ProductList/ProductList';
 import { GlobalState } from '../../../GlobalState';
 const Product = () => {
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error] = useState(null);
     const state = useContext(GlobalState)
     const [isAdmin] = state.userAPI.isAdmin
-    const { productsAPI, userAPI } = state;
-    const [products, setProducts] = productsAPI.products;
+    const { productsAPI} = state;
+    const [products] = productsAPI.products;
     useEffect(() => {
         if(products){
           setLoading(false);

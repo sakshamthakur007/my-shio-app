@@ -11,7 +11,7 @@ const Header = () => {
   console.log("state",state);
   const [isLogged,setIsLogged] = state.userAPI.isLogged
   const [isAdmin,setIsAdmin] = state.userAPI.isAdmin
-  const [cart,setCart] = state.userAPI.cart
+  const [cart] = state.userAPI.cart
 
   const logoutUser = async() => {
       await axios.get('/user/logout')
