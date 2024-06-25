@@ -7,7 +7,14 @@ const cors = require('cors'); // Import cors
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://my-shio-shop-frontend.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
+app.options('*', cors()); // Handle preflight requests
+
 app.use(express.json())             
 app.use(cookieParser())
 app.use(fileUpload({
